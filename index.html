@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Ovulation Calculator & Calendar" />
+        <meta name="author" content="faye" />
+        <title>Ovulation Calculator & Calendar</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<link rel="canonical" href="https://whenisovulation.com/" /><link rel="alternate" hreflang="x-default" href="https://whenisovulation.com/"><link rel="alternate" hreflang="en" href="https://whenisovulation.com/"><link rel="alternate" hreflang="fr" href="https://whenisovulation.com/fr/">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="/js/common.js"></script>
+		<script src="/js/layer/layer.js"></script>
+		<script src="/js/bootstrap.min2.js"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+		<link href="/css/ovulation.css?20240909" rel="stylesheet" type="text/css" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">When is Ovulation</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+												
+
+                    </ul>
+                </div>
+				<div class="collapse>
+				<li class="langmenu nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg width="17" height="17" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.8499 5.99997H32.2099C28.7956 5.98618 25.4119 6.64503 22.2522 7.93892C19.0924 9.2328 16.2185 11.1364 13.7944 13.5409C11.3703 15.9455 9.44362 18.804 8.12426 21.9532C6.8049 25.1024 6.11874 28.4806 6.10495 31.895C6.09116 35.3093 6.75002 38.693 8.0439 41.8527C9.33778 45.0125 11.2414 47.8864 13.6459 50.3105C16.0505 52.7346 18.909 54.6613 22.0582 55.9807C25.2074 57.3 28.5856 57.9862 31.9999 58H32.8399C39.7356 58 46.3488 55.2607 51.2247 50.3847C56.1007 45.5088 58.84 38.8956 58.84 32C58.84 25.1043 56.1007 18.4911 51.2247 13.6152C46.3488 8.73925 39.7356 5.99997 32.8399 5.99997H32.8499ZM22.0999 12.36C20.0507 15.4993 18.6122 18.9972 17.8599 22.67H12.0899C14.1869 18.2155 17.7093 14.5875 22.0999 12.36ZM9.99995 32C10.001 30.2036 10.2193 28.414 10.6499 26.67H17.1699C16.9672 28.4394 16.867 30.219 16.8699 32C16.8655 33.6704 16.9557 35.3397 17.1399 37H10.5699C10.1929 35.36 10.0017 33.6827 9.99995 32ZM11.8999 41H17.7699C18.5171 44.7916 19.9872 48.404 22.0999 51.64C17.5926 49.3547 13.9985 45.6018 11.9099 41H11.8999ZM29.9999 53.52C26.4199 52 23.4099 47.23 21.8999 41H29.9999V53.52ZM29.9999 37H21.1799C20.7506 33.5856 20.7674 30.13 21.2299 26.72H29.9999V37ZM29.9999 22.72H21.9999C23.5399 16.63 26.5099 11.99 29.9999 10.53V22.72ZM51.9399 22.72H46.82C46.1005 19.2668 44.7877 15.9646 42.9399 12.96C46.8581 15.2054 49.9979 18.5929 51.9399 22.67V22.72ZM33.9999 10.24C37.7999 11.35 41 16.24 42.6899 22.67H33.9999V10.24ZM33.9999 26.67H43.45C43.688 28.4367 43.8083 30.2173 43.81 32C43.8112 33.6715 43.7077 35.3414 43.5 37H33.9999V26.67ZM33.9999 53.76V41H42.7799C41.18 47.62 37.8699 52.63 33.9999 53.76ZM42.9399 51.09C44.8497 47.989 46.1907 44.5721 46.9 41H52.11C50.1891 45.2431 46.9806 48.7734 42.9399 51.09ZM47.54 37C47.7242 35.3397 47.8144 33.6704 47.81 32C47.8096 30.2188 47.7061 28.4392 47.5 26.67H53.36C54.203 30.0582 54.2338 33.5976 53.45 37H47.54Z" fill="#FFFFFF"></path></svg> EN</a><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="position: absolute;"><a class="dropdown-item active" href="/">EN</a><a class="dropdown-item" href="/fr">FR</a><a class="dropdown-item" href="/es">ES</a></div></li> </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <!--<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />-->
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Ovulation Calculator</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Health & Pregnancy</p>
+            </div>
+        </header>
+        <section class="page-section portfolio p-1" id="ovulation">
+            <div class="container portfolio-item-caption  bg-primary text-white mb-0  rounded-2 ">		
+			<div class="data-box pt-4">
+				<h3 class="text-center">What is the first day of your last period?</h3>
+				<h3 class="text-center"><i class="fas fa-angle-double-down"></i></h3>
+				<div class="pp">
+					<div class="wrap">
+						<div class="pinp ml"><select id="js_year" name="js_year"><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option selected="selected" value="2021">2021</option></select></div><div class="ipt plr mr blr">Year</div><div class="pinp"><select id="js_month" name="js_month"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option selected="selected" value="10">10</option><option value="11">11</option><option value="12">12</option></select></div><div class="ipt plr bl">Month</div>
+					</div>
+				</div>
+				<div class="plr pb">
+					<div class="wrap"><div class="pinp ml"><select id="js_day" name="js_day"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option selected="selected" value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></div><div class="ipt plr bl">Date</div></div>
+				</div>
+				<div class="plr pb">
+					<div class="wrap"><div class="ipt plr mr br">Average length of menstrual cycle</div><div class="pinp"><select id="js_averagecyc" name="js_averagecyc">
+					<option value="22">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28" selected="selected">28 (average cycle)</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option></select></div><div class="ipt plr bl">Days</div></div>
+				</div>
+				<div class="plr pb">
+					<div class="wrap"><div class="ipt plr mr br">Length of period</div><div class="pinp"><select id="js_averagemenses" name="js_averagemenses"><option value="3">3</option><option value="4">4</option><option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></div><div class="ipt plr bl">Days</div></div>
+				</div>
+				<!--
+				<div class="plr pb">
+					<div class="wrap"><div class="pinp"><input type="submit" id="btnSubmit" class="lbut " value="计算安全期" /></div></div>
+				</div>-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" id="btnSubmit">
+                       <i class="far fa-check-circle"></i>
+                        Calculate your safe period!
+                    </a>
+                </div>				
+			</div>		
+			<div class="data-box pt-4 pb-4">
+				<div id="Calendar1" class="pt-4 pb-4"></div>
+				<div id="Calendar2" class="pt-4 pb-4"></div>
+			</div>			
+            </div>
+        </section>			
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">See more info</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h2>Higene Product</h2></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/hygiene.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h2>Pregnancy Test</h2></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/pregnancy.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h2>Birth Control</h2></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/birthcontrol.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <!--<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
+                        </div>
+                    </div>-->
+                    <!-- Portfolio Item 5-->
+                    <!--<div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
+                        </div>
+                    </div>-->
+                    <!-- Portfolio Item 6-->
+                    <!--<div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">Your menstrual cycle can vary from month to month, and not everyone's is the same length. Use this calculator to see when you may be ovulating to find your most fertile days. Typically, you can get pregnant during about 6 days each month. That's called your fertility window.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">This ovulation calculator is not a guarantee of pregnancy or of birth control. The calculator and information on this website are not medical advice. Talk to your doctor or nurse to plan for pregnancy and find birth control that works for you.</p></div>
+                </div>
+                <!-- About Section Button-->
+                <!-- <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                        <i class="fas fa-download me-2"></i>
+                        Free Download!
+                    </a>
+                </div> -->
+            </div>
+        </section>
+        <!-- Contact Section-->
+        
+		<section class="page-section p-2" id="question">
+		<div class="container border rounded-2">
+		<div class="accordion accordion-flush" id="accordionFlushExample">
+		  <div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingOne">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+				Frequently asked Question #1:  I feel uncomfortable during the ovulation period, is it a normal sign?
+			  </button>
+			</h2>
+			<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+			  <div class="accordion-body">Here are signs of ovulation: Rise in basal body temperature, cervical mucus is the texture of egg whites, breast tenderness, mild cramps or twinges in the abdomen, very mild spotting, heightened sense of smell, increased sex drive, changes in appetite or mood and bloating.  Check whether you are in these situations or not, go to seek doctor's help if you have further questions.</div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingTwo">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+				Frequently asked Question #2:  How long does ovulation lasts?
+			  </button>
+			</h2>
+			<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+			  <div class="accordion-body">Ovulation usually lasts from 12 to 24 hours. If the egg isn't fertilized in this time, it disintegrates. But a woman's fertile window lasts 6 days, because sperm can live in your body for up to five days. You can become pregnant if you have sex anywhere from five days before you ovulate until a day after it.</div>
+			</div>
+		  </div>
+		  <div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingThree">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+				Frequently asked Question #3:  I'm still not sure if I'm pregnant after the pregnancy test, or I find myself pregnant, now what?
+			  </button>
+			</h2>
+			<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+			  <div class="accordion-body">
+                <ul>If you're unsure about the test results: Wait a few days and take another test/consider using a more sensitive test that can detect lower levels of hCG in the urine/a blood test can provide a more accurate result. It’s also a good idea to discuss your situation with a professional, especially if you have irregular periods or other health concerns.</ul>
+                <ul>If you find yourself pregnant: Congratulations! It is suggested to visit a healthcare provider to get a confirmation of your pregnancy through a blood test and possibly an ultrasound. Depending on your personal, medical, and financial circumstances, consider what you want to do next. If you plan to continue the pregnancy, start discussing with your healthcare provider about necessary lifestyle changes and prenatal vitamins.</ul>
+              </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+		</section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Toronto, ON, Canada
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Reference & Contact</h4>
+                        <p class="lead mb-0">
+                            Uses MIT licensed Bootstrap theme created by
+                            <a href="https://startbootstrap.com">Start Bootstrap</a>
+                            .
+                            <br>
+                            The designer's website:
+                            <a href="https://fayeye.com">Faye Ye</a>
+                            .
+                        </p>
+                    </div>					
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; <a href="https://WhenisOvulation.com/">When is Ovulation</a> 2024</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Choose your hygiene product</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">There are always plenty of choices for hygiene products, and here are the most commonly seen ones on the market. Choose the product that best suits your needs and is most comfortable for you!
+                                        <ul><b>Sanity pads: </b> Easy to use, widely available, and no insertion needed. Suitable for beginners and those who are uncomfortable with internal products.  However, it can feel bulky and may cause irritation or rash if not changed regularly. Not environmentally friendly unless you opt for reusable cloth pads.</ul>
+                                        <ul><b>Tampons: </b>Discreet and comfortable when placed correctly; suitable for active lifestyles and swimming.  However, risk of Toxic Shock Syndrome (TSS) if left in too long. Some find insertion uncomfortable, and they can cause dryness.</ul>
+                                        <ul><b>Menstrual Cups: </b>Eco-friendly and cost-effective over time. Holds more fluid than tampons or pads, reducing the need for changes.  However, it can be messy to empty and clean, and there's a learning curve with insertion and removal. Might be uncomfortable for some users.</ul>
+                                        <ul><b>Period Underwear: </b>Highly absorbent, comfortable, and easy to use. Eco-friendly and offers good backup protection when used with other products.  However, initial cost is higher than other products, and they require proper washing. May not be sufficient alone on heavy flow days.</ul>
+                                        <ul><b>Reusable Cloth Pads: </b>Eco-friendly, cost-effective over time, and often more comfortable than disposable pads.  However, it needs to be washed, which can be inconvenient when not at home. Like period underwear, they require an initial investment.</ul>
+                                        Each product has its unique set of features, and the choice often depends on personal preference, lifestyle, comfort level, and environmental consciousness.
+                                    </p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Pregnancy test</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <!--<img class="img-fluid rounded mb-5" src="assets/img/portfolio/pregnancy.png" alt="..." />-->
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Each type of pregnancy test offers different benefits, so the choice can depend on how early you want to know, your budget, and personal preferences for privacy and ease of use.
+                                        <ul><b>Standard Home Pregnancy Tests (HPTs): </b>These are over-the-counter urine tests that detect the presence of human chorionic gonadotropin (hCG), a hormone produced during pregnancy. You either urinate on a stick or into a cup and dip the stick into the urine.  It is widely available, easy to use, and provide results within minutes. They can be used as early as the first day of a missed period.  However, accuracy depends on following the instructions carefully and the sensitivity of the test.</ul>
+                                        <ul><b>Digital Pregnancy Tests: </b>Similar to standard HPTs but display results in a digital format, often reading 'pregnant' or 'not pregnant'. It removes ambiguity in interpreting the result since there's no need to read lines.  However, it is generally more expensive than non-digital tests and still require careful handling to avoid errors.</ul>
+                                        <ul><b>Early Detection Pregnancy Tests: </b>Designed to detect very low levels of hCG, making them useful for testing before a missed period. It can provide an early indication of pregnancy, sometimes several days before a missed period.  However, it is more expensive and may lead to false positives due to their sensitivity (detecting very early pregnancies that might naturally end soon after implantation).</ul>
+                                        <ul><b>Blood Pregnancy Tests: </b>Performed at a doctor’s office, these tests can detect pregnancy earlier than urine tests and measure the exact amount of hCG.  It is more accurate than urine tests and can detect pregnancy about 7-12 days from possible conception.  However, it is more invasive and requires a visit to a healthcare provider.</ul>
+                                        <ul><b>Reusable Digital Pregnancy Test: </b>A newer type of test that includes a reader and test sticks, which can be a more eco-friendly option. It reduces waste as only the test sticks are disposable.  However, it has higher initial cost and still requires purchasing refills.</ul>
+                                    </p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Modal safedays -->
+        <div class="portfolio-modal modal fade" id="portfolioModal-safe_period" tabindex="-1" aria-labelledby="portfolioModal-safe_period" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Safety Period</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Although today is in the safety period, please take safety protection to protect yourself carefully!</p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>		
+        <!-- Portfolio Modal ovulation -->
+        <div class="portfolio-modal modal fade" id="portfolioModal-ovulation" tabindex="-1" aria-labelledby="portfolioModal-ovulation" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ovulation Period</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">During the ovulation period, please take safety protection or go ahead to prepare for pregnancy, good luck:)</p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>		
+        <!-- Portfolio Modal menses -->
+        <div class="portfolio-modal modal fade" id="portfolioModal-period" tabindex="-1" aria-labelledby="portfolioModal-period" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Menstrual Period</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">During the period, please get plenty of rest and stay hygienic, avoid alcohols/caffeine!</p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>				
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" aria-labelledby="portfolioModal-2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ovulation Period(Easily get Pregnant!)</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <!--<img class="img-fluid rounded mb-5" src="assets/img/portfolio/pregnancy.png" alt="..." />-->
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Today is the highest posibility to get pregnant!</p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Common birth control methods</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <!--<img class="img-fluid rounded mb-5" src="assets/img/portfolio/birthcontrol.png" alt="..." />-->
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Each method has its unique considerations, so choosing the right one involves balancing factors like convenience, health conditions, potential side effects, and whether or not you also need protection against STDs.
+                                        <ul><b>Birth Control Pills: </b>It is highly effective when used correctly, can regulate menstrual cycles, reduce menstrual cramps, and may help with acne.  However, it requires daily intake; can cause side effects like nausea, weight gain, or mood changes; does not protect against STDs.</ul>
+                                        <ul><b>Condoms (Male and Female): </b>Protect against STDs, inexpensive, and accessible without a prescription.  However, it can break or slip during use; some people are allergic to latex (common material for condoms).</ul>
+                                        <ul><b>Intrauterine Device (IUD): </b>It is long-lasting (5 to 10 years), highly effective, and low-maintenance once inserted.  However, it can cause heavy bleeding and cramping initially; insertion and removal must be performed by a healthcare provider.</ul>
+                                        <ul><b>Implant: </b>It is effective for up to 3 years, highly effective, and user does not need to remember daily medication.  However, Insertion and removal require a healthcare provider; can cause irregular bleeding.</ul>
+                                        <ul><b>Injectable Birth Control (Depo-Provera): </b>Administered every three months, highly effective.  However, it can cause weight gain, bone density loss with long-term use, and may delay fertility return after stopping.</ul>
+                                        <ul><b>Vaginal Ring (NuvaRing): </b>Changed monthly, allows more freedom than daily pills.  However, it can cause vaginal irritation or discharge; does not protect against STDs.</ul>
+                                        <ul><b>Patch: </b>Changed weekly, effective and easy to use.  However, it is visible on the skin, can cause skin reactions, and has similar side effects to pills.</ul>
+                                        <ul><b>Natural Family Planning (Fertility Awareness): </b>No medications or devices used, can enhance understanding of one’s fertility cycle.  However, it requires daily monitoring of fertility signals, less effective than other methods, and needs thorough training to use effectively.</ul>
+                                        <ul><b>Sterilization (Tubal Ligation or Vasectomy): </b>A permanent solution, highly effective.  However, there is surgical risks, irreversible, and may not be an option for those who might want children later.</ul>
+                                    </p>
+                                    <button class="btn btn-primary" href="" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 7-->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModal7" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>									
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>		
+	
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+		<script type="text/javascript" src="js/dateselector.js"></script>
+		<script type="text/javascript" src="js/mobile.script.js?20240910"></script>
+		<script type="text/javascript" src="js/locale/en.js"></script>
+    </body>
+</html>
